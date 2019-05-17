@@ -8,7 +8,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.prjcadcliente.dominio.Cliente;
 import com.prjcadprodutos.dominio.Produtos;
 
 /**
@@ -135,7 +134,7 @@ public class CrudProdutos {
 			//Chamar o gerenciador de driver
 			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbproduto?serverTimezone=UTC","root","");
 			//Vamos criar a consulta para selecionar os clientes por nome
-			String consulta = "Select * from tbclientes where nome=?";
+			String consulta = "Select * from tbprodutos where nome=?";
 			pst = con.prepareStatement(consulta);
 			
 			pst.setString(1, nome);
